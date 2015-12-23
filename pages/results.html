@@ -1,0 +1,50 @@
+
+		<a class="btn btn-default" href="#">Back</a>
+	<h1>Results Page</h1>
+
+
+		<div ng-controller="resultsController">
+
+	<table st-table="rowCollection" class="table table-striped">
+		<thead>
+			<th>
+				<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+			</th>
+		<tr>
+			<th st-sort="firstName">ID</th>
+			<th st-sort="lastName">Course Name</th>
+			<th st-sort="professor"> Professor name</th>
+			<th st-sort="birthDate">Days</th>
+			<th st-sort="balance">Time</th>
+			<th st-sort="encap"> Enrolled/Capacity</th>
+			<th st-sort="location"> Location </th>
+			<th>email</th>
+		</tr>
+		<tr>
+			
+			
+		</tr>
+		</thead>
+		<tbody ng-controller="rowController">
+		<tr ng-repeat="row in rowCollection" ng-click="row_click(row.link)">
+			<td>{{row.name | uppercase}}</td>
+			<td style="word-wrap:break-word">{{row.longname}}</td>
+			<td> {{row.prof}}</td>
+			<td>{{row.date | date}}</td>
+			<td>{{row.time}}</td>
+			<td> <span style="font-size: 2em" ng-style="{'color': row.color}">{{row.enrolled}}</span> / {{row.cap}} </td>
+			<td> {{row.location}}</td>
+			<td><a ng-href="{{row.book}}">Course Books</a></td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5" class="text-center">
+					<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+	</div>
+	
+

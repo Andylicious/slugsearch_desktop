@@ -1,0 +1,61 @@
+<div class="jumbotron text-center">
+	<h1>Slug Search for Desktop</h1>
+	
+	<!-- <p>{{ message }}</p> -->
+
+	<div class="jumbotron text-center">
+
+   
+ <!-- <p>Selected: {{term.selected}} </p> -->
+ <p> Type in the box of your respected search queries or select from the drop down menu </p>
+  <ui-select ng-model="term.selected" theme="selectize" ng-disabled="disabled" style="width: 100%;">
+    <ui-select-match placeholder="Term">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="term in terms | filter: $select.search">
+      <span ng-bind-html="term.name | highlight: $select.search"></span>
+     
+    </ui-select-choices>
+  </ui-select>
+
+
+   <!-- <p>Selected: {{subject.selected}}</p> -->
+  <ui-select ng-model="subject.selected" theme="selectize" ng-disabled="disabled" style="width: 100%;">
+    <ui-select-match placeholder="Subject">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="subject in subjects | filter: $select.search">
+      <span ng-bind-html="subject.name | highlight: $select.search"></span>
+     
+    </ui-select-choices>
+  </ui-select>
+
+  <!-- <p>Selected: {{session.selected}}</p> -->
+  <ui-select ng-model="session.selected" theme="selectize" ng-disabled="disabled" style="width: 100%;">
+    <ui-select-match placeholder="Session">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="session in sessions | filter: $select.search">
+      <span ng-bind-html="session.name | highlight: $select.search"></span>
+     
+    </ui-select-choices>
+  </ui-select>
+
+ <!-- <p>Selected: {{reg_stati.selected}}</p> -->
+  <ui-select ng-model="reg_stati.selected" theme="selectize" ng-disabled="disabled" style="width: 100%;">
+    <ui-select-match placeholder="Open/All">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="reg_stati in reg_status | filter: $select.search">
+      <span ng-bind-html="reg_stati.name | highlight: $select.search"></span>
+     
+    </ui-select-choices>
+  </ui-select>
+
+  <!--  <p>Selected: {{generaled.selected}}</p> -->
+  <ui-select ng-model="generaled.selected" theme="selectize" ng-disabled="disabled" style="width: 100%;">
+    <ui-select-match placeholder="General Education">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="generaled in generaleds | filter: $select.search">
+      <span ng-bind-html="generaled.name | highlight: $select.search"></span>
+     
+    </ui-select-choices>
+  </ui-select>
+  
+  <a class="btn btn-default" ng-click="clear()">Clear</a>
+  <a class="btn btn-default" ng-click="submit_classes()">Submit</a>
+ 
+  
+</div>
+</div>
