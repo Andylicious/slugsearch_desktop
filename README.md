@@ -14,6 +14,8 @@ Check out the CMPS115 app project on iOS safari or Chrome/Safari: http://slugsea
 
 ## Getting Started
 
+If you're unfamiliar to git, node, angularjs, go to this [page](STARTERTUTORIAL.md) before starting!
+
 **(1)** Clone this repository onto your machine. 
 
 **(2)** Install [node](https://nodejs.org/en/) on your machine
@@ -83,7 +85,7 @@ Note, for the ADVANCED section, be sure to email me what you're doing!
 - EASY
  - Make the results page look prettier, an example is found in the Enrolled/Capacity block of HTML
  - Make the home page look prettier.
- - Add a [spinner](http://plnkr.co/edit/BGLUYcylbIVJRz6ztbhf?p=preview) after you press the submit button. 
+ - Add a [spinner](http://plnkr.co/edit/BGLUYcylbIVJRz6ztbhf?p=preview) after you press the submit button. (In Progress by Drew)
  - Update the README.md to look better and be more concise. 
  - Populate the About page and the Contact page with more information
 - INTERMEDIATE
