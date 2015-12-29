@@ -283,7 +283,6 @@
 	      }
 
 	     });
-
     });
     
 	SlugSearch.controller('resultsController', ['$scope', 'courseData', function (scope, courseData) {
@@ -345,7 +344,6 @@
 	SlugSearch.controller('aboutController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
 
-		
 	});
 
 	SlugSearch.controller('contactController', function($scope) {
