@@ -67,8 +67,11 @@ Most development for the core slug search functionality will be under script.js 
 ## How the application works currently 
 
 **(1)** index.html includes script.js, which details the routing specifics. 
+
 **(2)** home.html is dependent on pisaController, which calls pisaparser_service for the GET request to our course resources 
+
 **(3)** The application calls on my server that behaves as a POST request proxy that sends our json to the UCSC Course [pages](https://pisa.ucsc.edu/class_search/) 
+
 **(4)** Through a couple of javascript and angularJS parsing, we display all of our results in the results page. 
 
 
