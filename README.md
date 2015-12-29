@@ -94,6 +94,8 @@ Note, for the ADVANCED section, be sure to email me what you're doing!
 - ADVANCED 
  - Migrate from hrefs to states so that when we go back to Home from Results, we still get 
  - Able to add UI that gets more information for each class can be displayed on either a [modal](http://mgcrea.github.io/angular-strap/#/modals) or a new page. 
+ - RateMyProfessor functionality (I've actually already written on for the CMPS115 project, so this will definitely be a must to recreate for Desktop!) 
+ - Able to post reviews through the site itself. (Probably going to use GunDB for that one..)
  - Use the Loop bus GPS tracker to write a web app that displays loop bus information. (Make sure not to copy SlugRoute, message me at ahlien@ucsc.edu if you want to help with this.)
  - Dining Hall web scraper (Yes, there's tons of these on the app store, but I'm anticipating this would be a useful functionality for the site. ) 
  - Employee Request system web scraper 
