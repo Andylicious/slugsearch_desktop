@@ -24,9 +24,20 @@ Check out the CMPS115 app project on iOS safari or Chrome/Safari: http://slugsea
 
 `live-server` 
 
-**(5)** Any changes made to the folder will automatically update the development site. 
+**(5)** Switch to the developing branch by doing 
 
-**(6)** Tip: Make sure to use the web console to look for flags and updates under the hood, such as what's being delivered to and from the class search server, etc. 
+`git checkout developing` 
+
+**(6)** Create a new branch of your work by doing 
+
+`git checkout -b TestBranch`
+
+after doing step 5
+
+
+**(7)** Any changes made to the folder will automatically update the development site. 
+
+**(8)** Tip: Make sure to use the web console to look for flags and updates under the hood, such as what's being delivered to and from the class search server, etc. 
 
 ## How to contribute 
 
@@ -34,9 +45,13 @@ Notes: I am unfamiliar with the traditional methodology of open sourced programs
 
 
 **(1)** Check out the TODOs at the bottom of the page to see what is needed for the site. 
+
 **(2)** Drop some inputs on [![Gitter](https://badges.gitter.im/Andylicious/slugsearch_desktop.svg)](https://gitter.im/Andylicious/slugsearch_desktop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) and we can get to it! 
+
 **(3)** CONTRIBUTORS! Make sure to do your work on the develop branch and create your own branch marking what you are going to do! 
+
 **(4)** If you're from UCSC and you want to get started, email me at ahlien@ucsc.edu on what you're interested in doing. I'm also down for a quick skype/googlehangouts if you want to learn a step-by-step on how to get started, and we can move forward from there! 
+
 **(5)** Report all issues [here](https://github.com/Andylicious/slugsearch_desktop/issues/new)
 
 Note: Live site will reflect the master branch on www.slugsearch.com, so far the site reflects the CMPS 115 project, but once a few key TODOs have been completed, I will be migrating the files over to www.slugsearch.com 
@@ -71,16 +86,13 @@ Note, for the ADVANCED section, be sure to email me what you're doing!
 - INTERMEDIATE
  - Fix the problem where if you try to make the window smaller, the Table titles get reduced to a "Enrolled/Cap...". 
  - When you refresh the page, go back to home. 
- - UI/UX changes. 
-  - A little ambiguous, but I've spent a good 20+ hours trying to get Material Design (like AngularMaterial and AngularBoostrap) to work on the page, but I've settled for normal bootstrap to get the functionality down before design, so if anyone's down to help me on the UI/UX, that'd be awesome! 
+ - UI/UX changes. (A little ambiguous, but I've spent a good 20+ hours trying to get Material Design (like AngularMaterial and AngularBoostrap) to work on the page, but I've settled for normal bootstrap to get the functionality down before design, so if anyone's down to help me on the UI/UX, that'd be awesome! )
  - Add an [Aside](http://mgcrea.github.io/angular-strap/#/asides) so that we can start branching off to more functionality. 
 - ADVANCED 
  - Migrate from hrefs to states so that when we go back to Home from Results, we still get 
  - Able to add UI that gets more information for each class can be displayed on either a [modal](http://mgcrea.github.io/angular-strap/#/modals) or a new page. 
- - Use the Loop bus GPS tracker to write a web app that displays loop bus information.
-  - Make sure not to copy SlugRoute, message me at ahlien@ucsc.edu if you want to help with this
- - Dining Hall web scraper 
-  - Yes, there's tons of these on the app store, but I'm anticipating this would be a useful functionality for the site. 
+ - Use the Loop bus GPS tracker to write a web app that displays loop bus information. (Make sure not to copy SlugRoute, message me at ahlien@ucsc.edu if you want to help with this.)
+ - Dining Hall web scraper (Yes, there's tons of these on the app store, but I'm anticipating this would be a useful functionality for the site. ) 
  - Employee Request system web scraper 
  - Anything else? Email/Contact me!
 
