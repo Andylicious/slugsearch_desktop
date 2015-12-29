@@ -1,5 +1,5 @@
 
-		<a class="btn btn-default" href="#">Back</a>
+    <a ng-controller="rowController" ng-click="back_button()" class="btn btn-default">Back</a>
 	<h1>Results Page</h1>
 
 
@@ -8,7 +8,17 @@
 	<table st-table="rowCollection" class="table table-striped">
 		<thead>
 			<th>
+			<input class="input-sm form-control" placeholder="Results Per Page" name="items" id="items" type="number" ng-model="itemsByPage" />
+		</th>
+			<th>
 				<input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+
+			</th>
+			<th>
+
+				<td colspan="5" class="text-center">
+					<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
+				</td>
 			</th>
 		<tr>
 			<th st-sort="firstName">ID</th>
@@ -26,7 +36,7 @@
 		</tr>
 		</thead>
 		<tbody ng-controller="rowController">
-		<tr ng-repeat="row in rowCollection" ng-click="row_click(row.link)">
+		<tr ng-repeat="row in rowCollection" ng-click="row_click(row.link, row.prof, row)">
 			<td>{{row.name | uppercase}}</td>
 			<td style="word-wrap:break-word">{{row.longname}}</td>
 			<td> {{row.prof}}</td>
@@ -37,13 +47,7 @@
 			<td><a ng-href="{{row.book}}">Course Books</a></td>
 		</tr>
 		</tbody>
-		<tfoot>
-			<tr>
-				<td colspan="5" class="text-center">
-					<div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="7"></div>
-				</td>
-			</tr>
-		</tfoot>
+
 	</table>
 	</div>
 	

@@ -1,5 +1,5 @@
 	// create the module and name it SlugSearch
-	var SlugSearch = angular.module('SlugSearch', ['ngRoute','ngSanitize','ui.router','ui.select','smart-table']);
+	var SlugSearch = angular.module('SlugSearch', ['ngRoute','ngSanitize','ui.router','ui.select','smart-table','mgcrea.ngStrap']);
 
 	SlugSearch.run(
   [          '$rootScope', '$state', '$stateParams',
@@ -15,7 +15,8 @@
   ]
 )
 	// configure our routes
-	SlugSearch.config(function($stateProvider,$routeProvider) {
+	SlugSearch.config(function($stateProvider,$routeProvider, $urlRouterProvider) {
+		$urlRouterProvider.otherwise("/");
 		$routeProvider
 
 			// route for the home page
@@ -242,10 +243,10 @@
         $state.go("home.results")
       });
 
-  $scope.set_link = function(link) {
-    sharedLinks.set_course_link(link);
-  }
+	  $scope.set_link = function(link) {
+	    sharedLinks.set_course_link(link);
 	  }
+	 }
 	   PisaService.getPisaFields().then(function(data){
 	    console.log(data)
 	      $scope.check = data;
@@ -289,7 +290,6 @@
 		//console.log(courseData.get_pisa());
 		//$scope.groups = [];
 
-
 		var course_data = courseData.get_pisa();
 		
 		//$scope.groups = courseData.get_pisa();
@@ -324,12 +324,19 @@
 	    }
 	}]);
 
-	SlugSearch.controller('rowController', function($scope) {
+	SlugSearch.controller('rowController', function($state,$scope, sharedLinks, sharedProf, courseData) {
 		$scope.message = 'Look! I am an about page.';
-
-		$scope.row_click = function(vm){
+		$scope.back_button = function(){
+			$state.go("home");
+		}
+		$scope.row_click = function(link,prof,data){
 			console.log("Row has been clicked");
-			console.log("vm is " + vm)
+			console.log("vm is " + link)
+
+			sharedLinks.set_course_link(link);
+		    sharedProf.set_course_prof(prof);
+		    sharedLinks.set_books_link(data.book);
+		    courseData.set_tmp_course(data);
 		}
 		
 	});
