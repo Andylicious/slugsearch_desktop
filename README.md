@@ -16,7 +16,7 @@ Check out the CMPS115 app project on iOS safari or Chrome/Safari: http://slugsea
 
 If you're unfamiliar to git, node, angularjs, go to this [page](STARTERTUTORIAL.md) before starting!
 
-**(1)** Clone this repository onto your machine. 
+**(1)** Fork this repository onto your machine. Learn how to fork and submit pull requests [here](https://help.github.com/articles/fork-a-repo/).
 
 **(2)** Install [node](https://nodejs.org/en/) on your machine
 
