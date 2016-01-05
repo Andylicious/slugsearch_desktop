@@ -28,6 +28,11 @@
 				templateUrl : 'pages/results.html',
 				controller  : 'resultsController'
 			})
+			.when('/course',{
+				templateUrl : 'pages/course.html',
+				controller : 'courseController'
+			})
+
 			// route for the about page
 			.when('/about', {
 				templateUrl : 'pages/about.html',
@@ -52,6 +57,9 @@
 			})
 			.state("contact",{
 				url:"/contact"
+			})
+			.state("course",{
+				url:"/course"
 			})
 
 	});
@@ -336,10 +344,16 @@
 		    sharedProf.set_course_prof(prof);
 		    sharedLinks.set_books_link(data.book);
 		    courseData.set_tmp_course(data);
+
+		    $state.go('course');
 		}
 		
 	});
 
+	SlugSearch.controller('courseController', function($scope) {
+		$scope.message = 'Look! I am an about page.';
+
+	});
 
 	SlugSearch.controller('aboutController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
