@@ -351,7 +351,7 @@
 	});
 
 	SlugSearch.controller('courseController', function($scope) {
-		$scope.message = 'Look! I am an about page.';
+		console.log("Doing work on the courseController")
 
 	});
 
